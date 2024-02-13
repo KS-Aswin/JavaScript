@@ -5,12 +5,16 @@
         	<link rel="stylesheet" href="./styles/style.css">
         </head>
 	<body>
-		<h1>Sum and Avarage of three Numbers</h1>
+		<h1>Sum and Average of three Numbers.</h1>
 		<div class="container">
-			<input type="number" name="num1" id="num1" placeholder="Enter first number" required>
-			<input type="number" name="num2" id="num2" placeholder="Enter second number" required>
-			<input type="number" name="num3" id="num3" placeholder="Enter third number" required>
-			<button id="addButton">Submit</button>
+			<form id="addForm">
+				<div class="forms">
+					<input type="number" name="num1" id="num1" placeholder="Enter number 1" required><br>
+					<input type="number" name="num2" id="num2" placeholder="Enter number 2" required><br>
+					<input type="number" name="num3" id="num3" placeholder="Enter number 3" required>
+				</div>
+			</form>
+			<button onClick="addButton()">Add</button>
 			<p id="sum"></p>
 			<p id="avg"></p>
 		</div>	

@@ -1,6 +1,4 @@
-var addButton = document.getElementById("addButton");
-addButton.addEventListener("click",function(event){
-	event.preventDefault();
+function addButton(){
 	var num1 = parseInt(document.getElementById("num1").value);
 	var num2 = parseInt(document.getElementById("num2").value);
 	var num3 = parseInt(document.getElementById("num3").value);
@@ -8,4 +6,4 @@ addButton.addEventListener("click",function(event){
 	var avg = sum/3;
 	document.getElementById("sum").innerHTML="Sum is : " + sum;
 	document.getElementById("avg").innerHTML="Avarage is : " + avg;
-});
+}
