@@ -1,13 +1,22 @@
- function reverseNum() {
+function reverseNum() {
+    var num = document.getElementById("num").value.trim();
 
-	var num = parseFloat(document.getElementById("num").value);
+    if (num == "") {
+        alert("Please enter a value!");
+        return;
+    }
 
-	num = parseFloat(num.toString().split('').reverse().join(''));
-	
-	if ( isNaN(num)){
-		alert("Enter numeric Values!...");
-		return;
-	}
+    if (isNaN(num)) {
+        alert("Enter numeric values only!");
+        return;
+    }
 
-	document.getElementById("result").innerHTML = "Reversed Number is : " + num;
+    var reversedNum = '';
+    var numStr = num.toString();
+
+    for (var i = numStr.length - 1; i >= 0; i--) {
+        reversedNum += numStr[i];
+    }
+
+    document.getElementById("result").innerHTML = "Reversed Number is : " + reversedNum;
 }

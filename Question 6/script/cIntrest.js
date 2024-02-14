@@ -1,22 +1,27 @@
 function calculateInterest() {
-    	var principal = parseFloat(document.getElementById("principal").value);
-    	var rate = parseFloat(document.getElementById("rate").value);
+    	var principal = document.getElementById("principal").value.trim();
+    	var rate = document.getElementById("rate").value.trim();
     	rate = rate / 100;
-	var time = parseFloat(document.getElementById("time").value);
-    	var compoundFrequency = parseFloat(document.getElementById("compoundFrequency").value);
-	if (principal === "" || rate === "" || time === "") {
-        alert("Please enter values in all fields!...");
-        return;
-    }
+	var time = document.getElementById("time").value.trim();
+    	var compoundFrequency = document.getElementById("compoundFrequency").value.trim();
+	
+	if (principal == "" || rate == "" || time == "" || compoundFrequency =="") {
+        	alert("Please enter values in all fields!...");
+        	return;
+    	}
 
     	if (isNaN(principal) || isNaN(rate) || isNaN(time) || isNaN(compoundFrequency)) {
         	alert("Enter numeric values!...");
         	return;
     	}
 
+	var p=parseFloat(principal);
+	var r=parseFloat(rate);
+	var t=parseFloat(time);
+	var c=parseFloat(compoundFrequency);
 
-    	var amount = principal * Math.pow(1 + rate / compoundFrequency, compoundFrequency * time);
+    	var amount = p * Math.pow(1 + r / c, c * t);
 
-    	var compoundInterest = amount - principal;
-	document.getElementById("result").innerHTML = "Compound Interest : " + compoundInterest.toFixed(2);
+    	var c = amount - p;
+	document.getElementById("result").innerHTML = "Compound Interest : " + c.toFixed(2);
 }

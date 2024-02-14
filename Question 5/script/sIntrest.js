@@ -1,7 +1,7 @@
 function calculateInterest() {
-    var principal =document.getElementById("principal").value;
-    var rate = document.getElementById("rate").value;
-    var time = document.getElementById("time").value;
+    var principal =document.getElementById("principal").value.trim();
+    var rate = document.getElementById("rate").value.trim();
+    var time = document.getElementById("time").value.trim();
 
     
     if (principal == "" || rate == "" || time == "") {
@@ -17,7 +17,7 @@ function calculateInterest() {
 	var r=parseFloat(rate);
 	var t=parseFloat(time);
 
-    var interest = parseFloat(principal * rate * time) / 100;
+    var interest = parseFloat(p * r * t) / 100;
 
-    document.getElementById("result").innerHTML = "Simple Interest : " + interest;
+    document.getElementById("result").innerHTML = "Simple Interest : " + interest.toFixed(2);
 }

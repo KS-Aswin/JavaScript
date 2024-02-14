@@ -1,12 +1,22 @@
  function calculateArea() {
 	var pi = 3.14;
-	var area = parseFloat(document.getElementById("area").value);
+	var area = document.getElementById("area").value.trim();
 
-	var result = parseFloat(pi * area * area);
+	if (area == "" ) {
+        alert("Please enter values in all fields!...");
+        return;
+    }
 
 	if ( isNaN(area)){
 		alert("Enter numeric values!...");
+        	return;
 	}
 
-	document.getElementById("result").innerHTML = "Area of Circle : " + result;
+	var a=parseFloat(area);
+
+	var result = parseFloat(pi * a * a);
+
+	
+
+	document.getElementById("result").innerHTML = "Area of Circle : " + result.toFixed(2);
 }

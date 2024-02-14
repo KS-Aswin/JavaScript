@@ -1,15 +1,23 @@
  function calculatePower() {
 
-	var base = parseFloat(document.getElementById("num1").value);
+	var base = document.getElementById("num1").value.trim();
 
-	var exponent = parseFloat(document.getElementById("num2").value);
+	var exponent = document.getElementById("num2").value.trim();
+	
+	if (base == "" || exponent == "" ) {
+        	alert("Please enter values in all fields!...");
+        	return;
+    	}
 
-	var result = parseFloat(Math.pow(base, exponent));
-
-	if ( isNaN(base) || isNaN(exponent) || isNaN(result)){
+	if ( isNaN(base) || isNaN(exponent)){
 		alert("Enter numeric values!...");
 		return;
 	}
+
+	var b=parseFloat(base);
+	var e=parseFloat(exponent);
+
+	var result = parseFloat(Math.pow(b, e));
 
 	document.getElementById("result").innerHTML = "Power of the Given Number is : " + result;
 }
