@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cylinder Volume</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Q46 - Program to find Volume and Surface Area of Cylinder!</h1>
+        <form>
+
+            <label for="height">Enter the height of the Cylinder : </label>
+            <input type="text" id="height" name="height" required>  
+
+            <label for="radius">Enter the radius of the Cylinder : </label>
+            <input type="text" id="radius" name="radius" required>
+        </form>
+        <button type="button" onclick="calculateCylinder()">Calculate</button>
+        <p id="surface"></p>
+        <p id="volume"></p>
+        <p id="lateral"></p>
+        <p id="topBottom"></p>
+    </div>
+    <script src="./script/cylinder.js"></script>
+</body>
+</html>

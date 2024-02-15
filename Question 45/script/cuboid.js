@@ -1,28 +1,27 @@
-function calculateCone() {
-    var area = document.getElementById("area").value.trim();
+function calculateCuboid() {
+    var width = document.getElementById("width").value.trim();
     var height = document.getElementById("height").value.trim();
     var length = document.getElementById("length").value.trim();
-    var radius = document.getElementById("radius").value.trim();
+    var bredth = document.getElementById("bredth").value.trim();
 
-    if (area == "" || height == "" || length == "" || radius == "") {
+    if (width == "" || height == "" || length == "" || bredth == "") {
         alert("Please enter a value!");
         return;
     }
 
-    if (isNaN(area) || area <= 0 || isNaN(height) || height <= 0 || isNaN(length) || length <= 0 || isNaN(radius) || radius <= 0) {
+    if (isNaN(width) || width <= 0 || isNaN(height) || height <= 0 || isNaN(length) || length <= 0 || isNaN(bredth) || bredth <= 0) {
         alert("Please enter a numeric value!");
         return;
     }
 
-    var a = parseFloat(area);
+    var w = parseFloat(width);
     var h = parseFloat(height);
     var l = parseFloat(length);
-    var r = parseFloat(radius);
-    var pi = 3.14;
+    var b = parseFloat(bredth);
 
-    var sA = (pi * r * l) + (pi * r * r);
-    var v = (1 / 3) * (pi * r * r * h);
-    var lS = pi * r * l;
+    var sA = (2 * l * w) + (2 * l * h) + (2 * w * h);
+    var v =(l * b * h);
+    var lS = 2 * h * (l * w);
 
     document.getElementById("surface").innerHTML = "Surface Area of cone : " + sA.toFixed(2);
     document.getElementById("volume").innerHTML = "Volume of cone : " + v.toFixed(2);
