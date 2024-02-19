@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Arithmetic Operations</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Arithmetic Operations</h1><br>
+
+        <h3>1 - Addition</h3>
+        <h3>2 - Subtraction</h3>
+        <h3>3 - Multiplication</h3>
+        <h3>4 - Division</h3>
+        <h3>5 - Exit</h3>
+
+	<form>
+		<label for="selectOption">Enter your Option :</label>
+        	<input type="text" id="selectOption" name="selectOption">
+	</form>
+        <button onclick="showInputs()">Select</button>
+	
+	<div id="inputFields"  style="display: none;>
+        	<form class="form">
+            		<label for="num1">Enter the first number :</label>
+            		<input type="text" id="num1" name="num1"><br>
+            		<label for="num2">Enter the second number :</label>
+            		<input type="text" id="num2" name="num2">	<br>
+        	</form>
+		<button onclick="calculate()">Calculate</button>
+	</div>
+        
+	
+
+        <div id="result"></div>
+    </div>
+    <script src="./script/switch.js"></script>
+</body>
+</html>

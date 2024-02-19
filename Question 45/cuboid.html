@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cuboid Volume</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Q45 - Program to find Volume and Surface Area of Cuboid!</h1>
+        <form>        
+            <label for="width">Enter the width of the Cuboid : </label>
+            <input type="text" id="width" name="width" required>
+
+            <label for="height">Enter the height of the Cuboid : </label>
+            <input type="text" id="height" name="height" required>  
+
+            <label for="length">Enter the length of the Cuboid : </label>
+            <input type="text" id="length" name="length" required>  
+
+            <label for="bredth">Enter the bredth of the Cuboid : </label>
+            <input type="text" id="bredth" name="bredth" required>
+        </form>
+        <button type="button" onclick="calculateCuboid()">Calculate</button>
+        <p id="surface"></p>
+        <p id="volume"></p>
+        <p id="lateral"></p>
+    </div>
+    <script src="./script/cuboid.js"></script>
+</body>
+</html>
