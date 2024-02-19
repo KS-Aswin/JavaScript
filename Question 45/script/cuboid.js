@@ -9,8 +9,8 @@ function calculateCuboid() {
         return;
     }
 
-    if (isNaN(width) || width <= 0 || isNaN(height) || height <= 0 || isNaN(length) || length <= 0 || isNaN(bredth) || bredth <= 0) {
-        alert("Please enter a numeric value!");
+    if (isNaN(width) || width < 0 || isNaN(height) || height < 0 || isNaN(length) || length < 0 || isNaN(bredth) || bredth < 0) {
+        alert("Please enter a numeric value greater than 0!");
         return;
     }
 

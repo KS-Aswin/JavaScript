@@ -6,8 +6,8 @@ function calculateSphere() {
         	return;
     	}
 
-    	if (isNaN(radius) || radius <= 0 ) {
-        	alert("Please enter a numeric value!");
+    	if (isNaN(radius) || radius < 0 ) {
+        	alert("Please enter a numeric value greater than 0!");
         	return;
     	}
 

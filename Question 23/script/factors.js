@@ -1,13 +1,19 @@
 function printFactor() {
     var num = document.getElementById("num").value.trim();
 
-    if (num == "") {
-        alert("Please enter a value!");
+    if (num == "" || num < 0) {
+        alert("Please enter a value greter than 0!");
         return;
     }
 
     if (isNaN(num)) {
         alert("Enter numeric values!");
+        return;
+    }
+
+    if (num == 0) {
+	document.getElementById("result").innerHTML = "Factor of the number 0 is Zero!";
+       
         return;
     }
 

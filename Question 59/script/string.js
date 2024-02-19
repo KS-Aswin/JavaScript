@@ -6,8 +6,8 @@ function printCharacters() {
         return;
     }
 
-    if (!isNaN(str)) {
-        alert("Please enter a number!");
+    if (/\d/.test(str)) {
+        alert("Please enter strings containing only letters!");
         return;
     }
 

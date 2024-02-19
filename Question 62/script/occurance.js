@@ -7,10 +7,10 @@ function occurance() {
         	return;
     	}
 
-    	if (!isNaN(str1) || !isNaN(str2)) {
-        	alert("Please enter a String!");
-        	return;
-    	}
+    	if (/\d/.test(str1) || /\d/.test(str2)) {
+        alert("Please enter strings containing only letters!");
+        return;
+    }
 
     	var count = 0;
 

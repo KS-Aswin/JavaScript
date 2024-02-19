@@ -6,10 +6,10 @@ function change() {
         	return;
     	}
 
-    	if (!isNaN(str)) {
-        	alert("Please enter a String!");
-        	return;
-    	}
+    	if (/\d/.test(str)) {
+        alert("Please enter strings containing only letters!");
+        return;
+    }
 	
 	var strAfter="";
 

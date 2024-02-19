@@ -6,8 +6,8 @@ function change() {
         return;
     }
 
-    if (!isNaN(str)) {
-        alert("Please enter a String!");
+    if (/\d/.test(str)) {
+        alert("Please enter strings containing only letters!");
         return;
     }
 

@@ -9,8 +9,8 @@ function calculateCone() {
         return;
     }
 
-    if (isNaN(area) || area <= 0 || isNaN(height) || height <= 0 || isNaN(length) || length <= 0 || isNaN(radius) || radius <= 0) {
-        alert("Please enter a numeric value!");
+    if (isNaN(area) || area < 0 || isNaN(height) || height < 0 || isNaN(length) || length < 0 || isNaN(radius) || radius < 0) {
+        alert("Please enter a numeric value greater than 0!");
         return;
     }
 

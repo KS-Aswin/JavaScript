@@ -6,10 +6,10 @@ function change() {
         	return;
     	}
 
-    	if (!isNaN(val)) {
-        	alert("Please enter a String!");
-        	return;
-    	}
+    	if (/\d/.test(val)) {
+        alert("Please enter strings containing only letters!");
+        return;
+    }
 	
 	var conso = 0;
     	var vowel = 0;

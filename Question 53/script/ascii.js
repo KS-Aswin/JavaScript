@@ -7,12 +7,10 @@ function printASCII() {
 		return;
 	}
 
-	if(!isNaN(inputString)){
-
-		alert("Enter a String!");
-		return;
-
-	}
+	if (/\d/.test(inputString)) {
+        alert("Please enter strings containing only letters!");
+        return;
+    }
 	
 	var asciiValues = [];
 

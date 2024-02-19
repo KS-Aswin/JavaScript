@@ -6,8 +6,8 @@ function calculateCube() {
         return;
     }
 
-    if (isNaN(length) || length <= 0) {
-        alert("Please enter a numeric value!");
+    if (isNaN(length) || length < 0) {
+        alert("Please enter a value greater than 0!");
         return;
     }
 

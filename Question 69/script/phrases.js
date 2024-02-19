@@ -10,7 +10,10 @@ function change() {
         alert("Please enter phrases!");
         return;
     }
-
+	if (/\d/.test(str)) {
+        alert("Please enter vale containing only phrases!");
+        return;
+    }
     var stack = [];
 
     for (var i = 0; i < str.length; i++) {

@@ -7,10 +7,10 @@ function specific() {
         	return;
     	}
 
-    	if (!isNaN(str1) || !isNaN(str2)) {
-        	alert("Please enter a String!");
-        	return;
-    	}
+    	if (/\d/.test(str1) || /\d/.test(str2)) {
+        alert("Please enter strings containing only letters!");
+        return;
+    }
 
     	var pos = -1;
 
@@ -23,6 +23,6 @@ function specific() {
     if (pos != -1) {
         document.getElementById("result").innerHTML = "Index of the searched character is : " + pos;
     } else {
-        document.getElementById("result").innerHTML = "Character is not Present : ";
+        document.getElementById("result").innerHTML = "Character is not Present ";
     }
 }
