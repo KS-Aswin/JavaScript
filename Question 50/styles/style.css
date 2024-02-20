@@ -15,3 +15,6 @@ body{
 	border:5px solid aqua;
 	padding:20px;
 }
+#inputFields{
+	display: none;
+}
